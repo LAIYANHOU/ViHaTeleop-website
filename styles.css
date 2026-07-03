@@ -96,6 +96,25 @@ section {
   content: ", ";
 }
 
+.authors sup,
+.affiliations sup {
+  font-size: 0.68em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.affiliations {
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.affiliation-block {
+  display: inline;
+}
+
 .publication-links {
   display: flex;
   flex-wrap: wrap;
@@ -183,7 +202,8 @@ figcaption {
 }
 
 .cards,
-.grid-2 {
+.grid-2,
+.figure-stack {
   display: grid;
   gap: 18px;
 }
@@ -198,6 +218,14 @@ figcaption {
 
 .grid-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.figure-stack {
+  grid-template-columns: 1fr;
+}
+
+.wide-figure-section {
+  padding: 26px 30px;
 }
 
 .card {
@@ -222,6 +250,14 @@ figcaption {
   overflow: hidden;
   border-radius: var(--radius);
   background: #120f0d;
+}
+
+.section-note {
+  max-width: 920px;
+  margin: 0 auto;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.65;
 }
 
 .text-link {
@@ -263,7 +299,8 @@ code {
 
   .cards,
   .code-cards,
-  .grid-2 {
+  .grid-2,
+  .figure-stack {
     grid-template-columns: 1fr;
   }
 
@@ -275,6 +312,10 @@ code {
   .authors {
     font-size: 0.98rem;
     line-height: 1.65;
+  }
+
+  .affiliations {
+    font-size: 0.94rem;
   }
 
   .publication-links {

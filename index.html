@@ -14,10 +14,13 @@
         <h1><span>ViHaTeleop:</span> A Low-cost, Lightweight Visual-Haptic Teleoperation System for Dexterous Manipulation Learning</h1>
         <p class="conference">IROS 2026</p>
         <div class="authors">
-          <span class="author-block">Fucai Zhu*</span>
-          <span class="author-block">YANHOU LAI</span>
-          <span class="author-block">Paul Maestre</span>
-          <span class="author-block">Koichi Hashimoto</span>
+          <span class="author-block">Fucai Zhu<sup>1</sup></span>
+          <span class="author-block">YANHOU LAI<sup>1</sup></span>
+          <span class="author-block">Paul Maestre<sup>1</sup></span>
+          <span class="author-block">Koichi Hashimoto<sup>1</sup></span>
+        </div>
+        <div class="affiliations">
+          <span class="affiliation-block"><sup>1</sup>Tohoku University</span>
         </div>
         <div class="publication-links" aria-label="Publication links">
           <span class="link-block">
@@ -99,39 +102,43 @@
           <figcaption>Hardware components and wearable configuration.</figcaption>
         </figure>
         <figure>
+          <img src="assets/led_effect.png" alt="LED illumination comparison">
+          <figcaption>LED illumination improves hand-tracking robustness in difficult lighting.</figcaption>
+        </figure>
+      </section>
+
+      <section class="wide-figure-section">
+        <figure>
           <img src="assets/tasks_fig.png" alt="Tasks used in the ViHaTeleop evaluation">
           <figcaption>Contact-critical task suite used in the evaluation.</figcaption>
         </figure>
       </section>
 
-      <section class="grid-2">
-        <figure>
-          <img src="assets/led_effect.png" alt="LED illumination comparison">
-          <figcaption>LED illumination improves hand-tracking robustness in difficult lighting.</figcaption>
-        </figure>
+      <section class="wide-figure-section">
         <figure>
           <img src="assets/subject_exp.png" alt="User study summary with and without haptics">
           <figcaption>User study summary under matched with/without-haptic conditions.</figcaption>
         </figure>
       </section>
 
-      <section class="grid-2">
+      <section class="wide-figure-section">
         <figure>
           <img src="assets/tactile_aware_fig.png" alt="Tactile-aware retargeting constraints">
           <figcaption>Tactile-aware retargeting encourages more useful fingertip contact geometry for flat tactile sensors.</figcaption>
         </figure>
+      </section>
+
+      <section class="figure-stack">
+        <h2>Policy Learning Pipeline</h2>
         <figure>
           <img src="assets/visual_tactile_pc.png" alt="Visual-tactile representation for policy learning">
           <figcaption>Visual-tactile representation used for downstream policy learning.</figcaption>
         </figure>
-      </section>
-
-      <section>
-        <h2>Policy Learning Pipeline</h2>
         <figure>
           <img src="assets/flow_1.png" alt="Dual-purpose tactile proxy pipeline in simulation">
           <figcaption>Dual-purpose tactile proxy pipeline in simulation. The same depth-camera-based tactile proxy supports both real-time haptic feedback for teleoperation and visual-tactile point cloud generation for downstream policy learning.</figcaption>
         </figure>
+        <p class="section-note">The visual-tactile representation and the depth-camera-based tactile proxy together support the full pipeline from demonstration collection to downstream policy learning.</p>
       </section>
 
       <section id="video">
