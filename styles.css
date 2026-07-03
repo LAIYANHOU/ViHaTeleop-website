@@ -1,0 +1,277 @@
+:root {
+  --bg: #f7f4ee;
+  --paper: #fffdfa;
+  --ink: #1f1a17;
+  --muted: #6d655f;
+  --line: #ddd2c4;
+  --accent: #0c7a6c;
+  --accent-soft: #d9efe8;
+  --button: #221d19;
+  --button-hover: #0c7a6c;
+  --soft: #f3ede4;
+  --shadow: 0 22px 60px rgba(34, 29, 25, 0.08);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top, rgba(12, 122, 108, 0.12), transparent 28%),
+    linear-gradient(180deg, #fbf8f2 0%, var(--bg) 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: min(1080px, calc(100vw - 32px));
+  margin: 28px auto 56px;
+}
+
+.hero,
+section {
+  background: var(--paper);
+  border: 1px solid rgba(221, 210, 196, 0.85);
+  border-radius: calc(var(--radius) + 8px);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 42px 48px 32px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin: 0 0 18px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  max-width: 920px;
+  margin: 0 auto 16px;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.hero-copy h1 span {
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.authors {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.12rem;
+  line-height: 1.55;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.resource-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid var(--button);
+  border-radius: 999px;
+  background: var(--button);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.resource-button:hover {
+  background: var(--button-hover);
+  border-color: var(--button-hover);
+  transform: translateY(-1px);
+}
+
+.resource-button.is-disabled {
+  border-color: #8d847c;
+  background: #8d847c;
+  cursor: default;
+}
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+section {
+  margin-top: 28px;
+  padding: 30px;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img,
+video {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.abstract p {
+  max-width: 920px;
+  margin: 0 auto;
+  font-size: 1.06rem;
+  line-height: 1.72;
+  text-align: justify;
+}
+
+.cards,
+.grid-2 {
+  display: grid;
+  gap: 18px;
+}
+
+.cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.code-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  height: 100%;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #fffdfa 0%, var(--soft) 100%);
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.card p + p {
+  margin-top: 10px;
+}
+
+.video-frame {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #120f0d;
+}
+
+.text-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+pre {
+  margin: 0;
+  overflow-x: auto;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: #201914;
+  color: #f6efe5;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+@media (max-width: 900px) {
+  .page {
+    width: min(100vw - 20px, 1080px);
+    margin: 16px auto 40px;
+  }
+
+  .hero {
+    padding: 30px 20px 24px;
+  }
+
+  section {
+    padding: 22px 18px;
+  }
+
+  .cards,
+  .code-cards,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .authors {
+    font-size: 1rem;
+  }
+
+  .publication-links {
+    gap: 8px;
+  }
+
+  .resource-button {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
