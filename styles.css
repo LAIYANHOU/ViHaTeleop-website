@@ -96,13 +96,6 @@ section {
   content: ", ";
 }
 
-.authors sup,
-.affiliations sup {
-  font-size: 0.68em;
-  line-height: 0;
-  vertical-align: super;
-}
-
 .affiliations {
   margin-top: 4px;
   color: var(--muted);
@@ -130,6 +123,7 @@ section {
 .resource-button {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   min-height: 42px;
   min-width: 104px;
   justify-content: center;
@@ -156,6 +150,20 @@ section {
   border-color: #8d847c;
   background: #8d847c;
   cursor: default;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 1.1rem;
+  font-size: 1rem;
+}
+
+.resource-button.is-disabled .icon {
+  opacity: 0.95;
 }
 
 section {
